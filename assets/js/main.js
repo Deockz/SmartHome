@@ -22,7 +22,7 @@ var devices = [
   {
     id: "4",
     name: "Kitchen",
-    status: "off",
+    status: "on",
     type: "light"
   }
   ,
@@ -83,15 +83,25 @@ devices.forEach(element => {
 
     }
 
-    buttonArea.innerHTML +=  '<button onclick="" class="deviceButton" name="turnDevice" value="hola"> <p class="smallText deviceStatus"> '+ element.status+ '</p> '+svgType +'   <p class="deviceName">'+element.name+'</p></button>'; 
-
-
-
-      
+    buttonArea.innerHTML +=  '<button onclick="changeState(this.value, this.name)" class="deviceButton " name="'+element.name+'" value="'+element.type+'"> <p class="smallText deviceStatus"> '+ element.status+ '</p> '+svgType +'   <p class="deviceName">'+element.name+'</p></button>'; 
+ 
 });
 
 
+function changeState(value,classNames) {
+  if(value === "light") {
+    icon = document.querySelector('.' + classNames+'.' + value);
+    iconContainer = document.querySelector('#' + classNames);
+    icon.classList.toggle("apagado");
+    icon.classList.toggle("encendido");
+    iconContainer.classList.toggle("habitacionEncendida");
+    iconContainer.classList.toggle("habitacionApagada");
+    
+  }else{
+    icon = document.querySelector('.' + classNames+'.' + value);
+    icon.classList.toggle("apagado");
+    icon.classList.toggle("encendido");
+    
+  }
 
-function turn() {
-  alert("¡Hola desde JavaScript!" + id);
 }

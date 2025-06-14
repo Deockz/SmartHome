@@ -5,20 +5,20 @@ p{
 }
 
 h3{
-  color: rgb(238, 238, 238);
+  color: rgb(157, 178, 191);
 }
 
 .smallText{
   font-size: x-small;
-  color: rgb(238, 238, 238);
+  color: rgba(221, 230, 237, 1);
 }
 
 body{
-  background-color: rgb(57, 62, 70);
+  background-color: #27374D;
 }
 
 .info{
-  background-color: gray;
+  background-color: red;
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 10px;
@@ -26,7 +26,7 @@ body{
 
 .infoContainer{
   border-radius: 10px;
-  background-color: rgb(34, 40, 49);
+  background-color: rgba(82, 109, 130,0.3);
   margin : 5px;
   padding: 20px 10px;
   
@@ -44,12 +44,22 @@ body{
   grid-template-rows: 20% 45% 35%;
   width: 100px;
   height: 80px;
-  background-color: rgb(57, 62, 70);
+  background-color: rgba(39, 55, 77,0.4);
+  
   box-shadow: none;
+  border-radius: 0.8rem;
   border-bottom: none;
   border-right: none;
   color: rgb(0, 173, 181);
   margin: 5px;
+}
+
+.deviceButton:hover{
+  background-color: rgba(82, 109, 130,0.8);
+}
+
+.deviceButton:active{
+  background-color: rgba(39, 55, 77,1);
 }
 
 .deviceLabel{
@@ -58,8 +68,9 @@ body{
   grid-template-rows: 20% 45% 35%;
   width: 100px;
   height: 80px;
-  background-color: rgb(57, 62, 70);
+  background-color: rgba(39, 55, 77,0.5);
   box-shadow: none;
+  border-radius: 0.5rem;
   border-bottom: none;
   border-right: none;
   color: rgb(0, 173, 181);
